@@ -105,7 +105,8 @@ body {
 }
 
 #drawingCanvas {
-  height: 70vh;
+  height: 100vw;
+  width: 100vw;
   background: white;
 }
 
@@ -125,6 +126,7 @@ body {
   width: 90%;
   border-radius: 5vh;
   position: relative;
+  overflow: hidden;
 }
 
 .imageContainer img {
@@ -137,6 +139,7 @@ body {
   line-height: 10vh;
   font-size: 4vh;
   justify-content: center;
+  margin-top: 2%;
 }
 
 #winTop {
@@ -180,8 +183,23 @@ body {
   text-transform: uppercase;
 }
 
+#readyButton {
+  position: absolute;
+
+  bottom: 2vh;
+}
 .player {
   position: relative;
+}
+
+.thinkText {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10%;
+  color: white;
+  font-size: 3vh;
+  font-family: "Audiowide";
+  text-align: center;
 }
 
 .avatarBiggerImg {

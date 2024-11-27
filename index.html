@@ -10,7 +10,11 @@
   </head>
   <body>
     <div id="page">
-      <div id="startScreen" class="screen off">
+      <div id="thinkingScreen" class="screen off">
+        <div class="logo"></div>
+        <div class="thinkText">Let's see what AI thinks of your drawings...</div>
+      </div>
+      <div id="startScreen" class="screen enabled">
         <div class="logo"></div>
         <div id="players">
           <div class="player">
@@ -51,7 +55,7 @@
         </div>
         <div class="promptInput">
           <div class="label">Add an idea for what to draw:</div>
-          <textarea id="promptTextArea"></textarea>
+          <textarea id="promptTextArea" placeholder="enter your suggestion here, e.g. a giant spider"></textarea>
           <div id="doneButton" class="button">Submit</div>
         </div>
       </div>
@@ -60,18 +64,20 @@
           <div class="label">Draw a picture of:</div>
           <div class="promptLabel">
             <img
+              id="promptAvatar"
               src="https://developers.rune.ai/img/avatar-placeholder.png"
               class="avatarImg"
             />
-            <div class="promptText">A big bag of spanners</div>
+            <div id="drawingTarget" class="promptText">A big bag of spanners</div>
           </div>
         </div>
         <div id="drawingArea">
           <div class="timer">
-            <div class="timerBar"></div>
+            <div id="drawTimerBar" class="timerBar"></div>
           </div>
           <canvas id="drawingCanvas"> </canvas>
         </div>
+        <div id="readyButton" class="button">Done</div>
       </div>
       <div id="criticScreen" class="screen off">
         <div class="drawLabel">
@@ -84,7 +90,7 @@
             <div class="label">
               <span id="playerName">Coke and Code</span> drew:
             </div>
-            <div class="promptText">A big bag of spanners</div>
+            <div id="criticText" class="promptText">A big bag of spanners</div>
           </div>
         </div>
         <div class="imageContainer">
@@ -99,7 +105,7 @@
           </div>
         </div>
       </div>
-      <div id="winScreen" class="screen enabled">
+      <div id="winScreen" class="screen off">
         <div id="winTop">
           <div class="bigLabel">And the winner is...</div>
           <div id="winner">
@@ -108,7 +114,7 @@
               id="winnerAvatar"
               class="avatarImg"
             />
-            <div class="winnerLabel">Coke and Code</div>
+            <div id="winnerLabel" class="winnerLabel">Coke and Code</div>
           </div>
         </div>
         <div class="imageContainer">
