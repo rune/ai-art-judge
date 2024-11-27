@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <title>AI Art Judge</title>
+  </head>
+  <body>
+    <div id="page">
+      <div id="startScreen" class="screen off">
+        <div class="logo"></div>
+        <div id="players">
+          <div class="player">
+            <img
+              src="https://developers.rune.ai/img/avatar-placeholder.png"
+              class="avatarImg"
+            />
+            <div class="avatarStatus"></div>
+          </div>
+          <div class="player">
+            <img
+              src="https://developers.rune.ai/img/avatar-placeholder.png"
+              class="avatarImg"
+            />
+            <div class="avatarStatus"></div>
+          </div>
+          <div class="player">
+            <img
+              src="https://developers.rune.ai/img/avatar-placeholder.png"
+              class="avatarImg"
+            />
+            <div class="avatarStatus"></div>
+          </div>
+          <div class="player">
+            <img
+              src="https://developers.rune.ai/img/avatar-placeholder.png"
+              class="avatarImg"
+            />
+            <div class="avatarStatus"></div>
+          </div>
+          <div class="player">
+            <img
+              src="https://developers.rune.ai/img/avatar-placeholder.png"
+              class="avatarImg"
+            />
+            <div class="avatarStatus"></div>
+          </div>
+        </div>
+        <div class="promptInput">
+          <div class="label">Add an idea for what to draw:</div>
+          <textarea id="promptTextArea"></textarea>
+          <div id="doneButton" class="button">Submit</div>
+        </div>
+      </div>
+      <div id="drawScreen" class="screen off">
+        <div class="prompt">
+          <div class="label">Draw a picture of:</div>
+          <div class="promptLabel">
+            <img
+              src="https://developers.rune.ai/img/avatar-placeholder.png"
+              class="avatarImg"
+            />
+            <div class="promptText">A big bag of spanners</div>
+          </div>
+        </div>
+        <div id="drawingArea">
+          <div class="timer">
+            <div class="timerBar"></div>
+          </div>
+          <canvas id="drawingCanvas"> </canvas>
+        </div>
+      </div>
+      <div id="criticScreen" class="screen off">
+        <div class="drawLabel">
+          <img
+            src="https://developers.rune.ai/img/avatar-placeholder.png"
+            id="currentAvatar"
+            class="avatarBiggerImg"
+          />
+          <div id="drewTextContainer">
+            <div class="label">
+              <span id="playerName">Coke and Code</span> drew:
+            </div>
+            <div class="promptText">A big bag of spanners</div>
+          </div>
+        </div>
+        <div class="imageContainer">
+          <img id="currentImage" src="" />
+        </div>
+        <div id="critique">
+          <div id="robotAvatar"></div>
+          <div id="robotText">
+            “A daring take on communication, this 'telephone' feels more like a
+            fruity feast—blurring the line between calling and snacking. Bold,
+            ambiguous, and oddly delicious!”
+          </div>
+        </div>
+      </div>
+      <div id="winScreen" class="screen enabled">
+        <div id="winTop">
+          <div class="bigLabel">And the winner is...</div>
+          <div id="winner">
+            <img
+              src="https://developers.rune.ai/img/avatar-placeholder.png"
+              id="winnerAvatar"
+              class="avatarImg"
+            />
+            <div class="winnerLabel">Coke and Code</div>
+          </div>
+        </div>
+        <div class="imageContainer">
+          <img id="winningImage" src="" />
+        </div>
+        <div id="shareButton" class="button">Share</div>
+      </div>
+    </div>
+    <script type="module" src="/src/logic.ts"></script>
+    <script type="module" src="/src/client.ts"></script>
+  </body>
+</html>
