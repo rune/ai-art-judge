@@ -128,6 +128,16 @@ div("doneButton").addEventListener("click", () => {
   }
 })
 
+textarea("promptTextArea").addEventListener("keyup", (e) => {
+  if (e.key === "Enter" || e.keyCode === 13) {
+    if (textarea("promptTextArea").value.trim().length > 0) {
+      div("doneButton").style.display = "none"
+      textarea("promptTextArea").disabled = true
+      Rune.actions.prompt(textarea("promptTextArea").value)
+    }
+  }
+})
+
 let currentScreen = "startScreen"
 
 function showScreen(screen: string) {
