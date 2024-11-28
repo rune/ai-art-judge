@@ -88,7 +88,12 @@ function drawTo(x: number, y: number) {
 }
 
 function submitImage(finished: boolean) {
-  const url = canvas.toDataURL("image/jpeg")
+  const rescale = document.createElement("canvas")
+  rescale.width = 300
+  rescale.height = 300
+  rescale.getContext("2d")!.drawImage(canvas, 0, 0, 300, 300)
+  const url = rescale.toDataURL("image/jpeg", 0.5)
+
   Rune.actions.image({ url, finished })
 }
 
