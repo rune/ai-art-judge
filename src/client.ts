@@ -44,7 +44,7 @@ if (isMobile) {
   canvas.addEventListener("touchmove", (e) => {
     drawTo(e.touches[0].clientX, e.touches[0].clientY)
   })
-  canvas.addEventListener("touchend", (e) => {
+  canvas.addEventListener("touchend", () => {
     // drawTo(e.t[0].clientX, e.touches[0].clientY)
   })
 } else {
