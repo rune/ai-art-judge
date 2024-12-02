@@ -1,4 +1,4 @@
-import type { RuneClient } from "rune-sdk"
+import type { GameOverResult, PlayerId, RuneClient } from "rune-sdk"
 
 const DRAW_TIMER = 60_000
 export const REVIEW_TIMER = 15_000
@@ -100,7 +100,7 @@ Rune.initLogic({
     }
   },
   updatesPerSecond: 10,
-  update: ({ game }) => {
+  update: ({ game, allPlayerIds }) => {
     if (Rune.gameTime() > game.timerEndsAt && game.timerEndsAt !== 0) {
       // clear the timer
       if (game.timerName === "drawing") {
@@ -109,9 +109,14 @@ Rune.initLogic({
         game.prompting = true
 
         promptForNextImage(game)
-      }
-      if (game.timerName === "review") {
+      } else if (game.timerName === "review") {
         startTimer(game, "end", END_LENGTH)
+      } else if (game.timerName === "end") {
+        const result: Record<PlayerId, GameOverResult> = {}
+        for (const id of allPlayerIds) {
+          result[id] = id === game.winner ? "WON" : "LOST"
+        }
+        Rune.gameOver({ players: result, minimizePopUp: true })
       }
     }
   },
