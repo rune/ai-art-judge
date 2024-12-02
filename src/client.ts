@@ -45,7 +45,7 @@ if (isMobile) {
     drawTo(e.touches[0].clientX, e.touches[0].clientY)
   })
   canvas.addEventListener("touchend", (e) => {
-    drawTo(e.touches[0].clientX, e.touches[0].clientY)
+    // drawTo(e.t[0].clientX, e.touches[0].clientY)
   })
 } else {
   let mouseDown = false
