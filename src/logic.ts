@@ -2,7 +2,7 @@ import type { GameOverResult, PlayerId, RuneClient } from "rune-sdk"
 
 const DRAW_TIMER = 60_000
 export const REVIEW_TIMER = 15_000
-const END_LENGTH = 30_000
+const END_LENGTH = 5_000
 
 export interface GameState {
   images: Record<string, string>
