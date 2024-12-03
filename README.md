@@ -1,4 +1,5 @@
 # Day 6 - AI Art Judge
+[Play!](https://join.rune.ai/game/ndNWZDVQ-iQE) | [Kick Off](https://www.youtube.com/watch?v=8CA15ifaukw) | [Time Lapse](https://www.youtube.com/watch?v=-bo8DCdm0QA) | [Post-Mortem](https://www.youtube.com/watch?v=7u4s8Ud87eQ) 
 
 The sixth in the series of 7 AI games in 7 days written for the [Rune](https://rune.ai) games app.
 
