@@ -1,28 +1,5 @@
-# Getting Started with Rune
+# Day 6 - AI Art Judge
 
-### `npm run dev`
+![ai-art-judge](https://github.com/user-attachments/assets/c857fa12-657f-4a21-852c-30c8df39406c)
 
-Runs the game in Dev UI.
-
-The page will reload when you make changes.
-
-### `npm run upload`
-
-Builds the game and starts upload process to Rune.
-
-### `npm run build`
-
-Builds the game. You can then upload it to Rune using `npx rune@latest upload`.
-
-### `npm run lint`
-
-Runs the validation rules. You can read about them in the [docs on server-side logic](https://developers.rune.ai/docs/advanced/server-side-logic).
-
-### `npm run typecheck`
-
-Verifies that TypeScript is valid.
-
-
-## Learn More
-
-See the [Rune docs](https://developers.rune.ai/docs/quick-start) for more info. You can also ask any questions in the [Rune Discord](https://discord.gg/rune-devs), we're happy to help!
+One of the great things about the AI in the Rune SDK is that it exposes image analysis as part of the same single API. AI Art Judge uses this to become an art critic. Players suggest a 'thing' to be drawn. They're then given a fixed time to draw a picture of the randomly picked item. Once everyone is done, the AI evaluates the drawings based on the original input and provides an overly artsy and funny critique. It turns out AI is an expert in being pompous. 
