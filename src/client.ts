@@ -92,7 +92,7 @@ function submitImage(finished: boolean) {
   rescale.width = 300
   rescale.height = 300
   rescale.getContext("2d")!.drawImage(canvas, 0, 0, 300, 300)
-  const url = rescale.toDataURL("image/jpeg", 0.5)
+  const url = rescale.toDataURL("image/jpeg", 0.4)
 
   Rune.actions.image({ url, finished })
 }
